@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_01"
+        android:background="@color/white_color"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menunamelay"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_1"
+                android:layout_marginStart="@dimen/margin_1"
+                android:paddingTop="@dimen/margin_1"
+                android:paddingBottom="@dimen/margin_1"
+                android:layout_weight="8"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/menuname"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:textSize="@dimen/normal_text_size"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textColor="@color/white_color"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/menutiming"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/very_small_text_size"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textColor="@color/white_color"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginRight="@dimen/margin_1"
+                android:id="@+id/container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageclosed"
+                    android:visibility="gone"
+                    android:padding="@dimen/margin_2"
+                    android:src="@drawable/ic_left_and_right_arrows"
+                    android:layout_width="@dimen/margin_7"
+                    android:layout_height="@dimen/margin_7"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageopen"
+                    android:padding="@dimen/margin_2"
+                    android:src="@drawable/ic_top_and_bottom_arrow"
+                    android:layout_width="@dimen/margin_7"
+                    android:layout_height="@dimen/margin_7"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.github.aakira.expandablelayout.ExpandableLinearLayout
+            android:id="@+id/expand_option"
+            android:orientation="vertical"
+            app:ael_duration="500"
+            app:ael_expanded ="true"
+            app:ael_interpolator="accelerateDecelerate"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layoutAnimation="@anim/layout_animation_fall_down"
+            android:id="@+id/menuItemsRecycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+
+    </LinearLayout>
+</layout>

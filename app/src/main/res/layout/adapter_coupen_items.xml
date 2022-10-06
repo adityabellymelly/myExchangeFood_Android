@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/parent"
+            android:background="@drawable/shape_rec_white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="@dimen/margin_1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="2"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:maxWidth="@dimen/signature_wh"
+                            android:id="@+id/nameofcoopen"
+                            android:gravity="start"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/normal_text_size"
+                            android:fontFamily="@font/redhatdisplay_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:visibility="gone"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:paddingStart="@dimen/margin_1"
+                            android:paddingTop="@dimen/margin_1"
+                            android:paddingBottom="@dimen/margin_1"
+                            android:paddingEnd="@dimen/very_small_text_size"
+                            android:maxWidth="@dimen/signature_wh"
+                            android:id="@+id/spacific"
+                            android:gravity="start"
+                            android:textColor="@color/colorYellow"
+                            android:textSize="@dimen/very_small_text_size"
+                            android:fontFamily="@font/redhatdisplay_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:id="@+id/applied"
+                        android:textAllCaps="true"
+                        android:gravity="right"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_green"
+                        android:textSize="@dimen/small_text_size"
+                        android:text="@string/apply"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:layout_weight="1"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/persentoff"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/very_small_text_size"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/abovemessage"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/very_small_text_size"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:id="@+id/discription"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/small_text_size"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+
+                android:layout_marginTop="@dimen/margin_1"
+                android:background="@color/gray_light"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</layout>

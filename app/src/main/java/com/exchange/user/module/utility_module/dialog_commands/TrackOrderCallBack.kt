@@ -1,0 +1,15 @@
+package com.exchange.user.module.utility_module.dialog_commands
+
+import com.exchange.user.module.order_info_module.model.DeliveryStatus
+import com.exchange.user.module.order_info_module.model.OrderInfoModel
+import com.exchange.user.module.profile_module.model.OrderHistory
+
+interface TrackOrderCallBack {
+
+//      fun callApi(resturentata: OrderInfoModel, deliveryStatus: DeliveryStatus?)
+
+    fun onResult(orderInfoResponse: OrderInfoModel,
+                 deliveryStatus: DeliveryStatus?)
+    fun onResult(orderInfoResponse: OrderInfoModel,
+                 deliveryStatus: DeliveryStatus?, orderHistory: OrderHistory)
+}

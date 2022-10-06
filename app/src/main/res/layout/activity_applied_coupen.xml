@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="appliedCoupenViewModel"
+            type="com.exchange.user.module.coupon_module.AppliedCoupenViewModel" />
+    </data>
+
+    <LinearLayout
+        android:background="@color/white_color"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:onClick="@{()->appliedCoupenViewModel.onBack()}"
+            android:id="@+id/goback"
+            android:elevation="@dimen/margin_03"
+            android:background="@color/transparent_color"
+            android:layout_marginTop="@dimen/margin_2"
+            android:layout_marginStart="@dimen/margin_3"
+            android:src="@drawable/ic_back_arrow_black"
+            android:layout_width="@dimen/margin_7"
+            android:layout_height="@dimen/margin_7"/>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_2"
+            android:layout_marginRight="@dimen/margin_2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginLeft="@dimen/margin_1"
+                android:layout_marginRight="@dimen/margin_1"
+                android:elevation="@dimen/margin_1"
+                android:layout_marginTop="@dimen/margin_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_margin="@dimen/margin_03"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/promotext"
+                        android:textSize="@dimen/small_text_size"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:hint="@string/enter_promo_code"
+                        android:padding="@dimen/margin_1"
+                        android:background="@color/transparent_color"
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:onClick="@{()->appliedCoupenViewModel.searchCoupon()}"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/margin_1"
+                        android:background="@color/transparent_color"
+                        android:textColor="@color/color_green"
+                        android:textSize="@dimen/very_small_text_size"
+                        android:textAllCaps="true"
+                        android:text="@string/apply"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin_7"/>
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+            <androidx.core.widget.NestedScrollView
+                android:layout_marginTop="@dimen/margin_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:text="@string/available_coupons"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:background="@color/gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:visibility="gone"
+                        android:id="@+id/message"
+                        android:gravity="center"
+                        android:textSize="@dimen/normal_text_size"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:textColor="@color/colorAccent"
+                        android:text="@string/no_coupon_available_currently"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/navigation_width"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:layoutAnimation="@anim/layout_animation_fall_down"
+                        android:id="@+id/recycleCoupen"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:text="@string/available_discount"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:visibility="gone"
+                        android:id="@+id/dicmessage"
+                        android:gravity="center"
+                        android:textSize="@dimen/normal_text_size"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:textColor="@color/colorAccent"
+                        android:text="@string/no_discount_available_currently"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/profile_pic_width"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:layoutAnimation="@anim/layout_animation_fall_down"
+                        android:id="@+id/recycleDisc"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

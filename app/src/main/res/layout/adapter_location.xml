@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="@dimen/margin_1"
+        android:layout_margin="@dimen/margin_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/margin_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/locationname"
+                android:fontFamily="@font/redhatdisplay_regular"
+                android:padding="@dimen/margin_1"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/white_color"
+                android:text="Location Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

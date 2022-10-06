@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="varifyotpViewModel"
+            type="com.exchange.user.module.varifyotp_module.VarifyOtpViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:background="@color/white_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lay_title"
+            android:padding="@dimen/margin_1"
+            android:orientation="vertical"
+            android:background="@drawable/lay_shape_gradian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:onClick="@{()->varifyotpViewModel.back()}"
+                android:padding="@dimen/margin_1"
+                android:layout_margin="@dimen/margin_3"
+                android:src="@drawable/ic_back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_marginStart="@dimen/margin_5"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:paddingBottom="@dimen/margin_2"
+                    android:background="@drawable/underline"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textSize="@dimen/xxlarge_text_size"
+                    android:text="@string/veri"
+                    android:textColor="@color/white_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:paddingBottom="@dimen/margin_2"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textSize="@dimen/xxlarge_text_size"
+                    android:text="@string/fy_otp"
+                    android:textColor="@color/white_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/fied"
+            android:layout_below="@+id/lay_title"
+            android:layout_marginTop="@dimen/margin_2"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/message"
+                android:textSize="@dimen/normal_text_size"
+                android:fontFamily="@font/redhatdisplay_regular"
+                android:textColor="@color/gray"
+                android:text="@string/verification_code_send_to_your_nemail_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/editlay"
+                android:layout_margin="@dimen/margin_2"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:drawableStart="@drawable/ic_email"
+                    android:onClick="@{()->varifyotpViewModel.editPhoneNumber()}"
+                    android:id="@+id/mobileno"
+                    android:drawablePadding="@dimen/margin_3"
+                    android:textSize="@dimen/normal_text_size"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+            <com.mukesh.OtpView
+                android:layout_gravity="center_horizontal"
+                android:inputType="number"
+                app:state_filled="true"
+                android:id="@+id/otpView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_margin"
+                app:lineHeight="@dimen/margin_01"
+                app:itemCount="4"
+                app:lineWidth="@dimen/margin_01"
+                app:itemSpacing="@dimen/small_margin"
+                app:lineColor="@color/colorPrimary"
+                app:itemRadius="@dimen/margin_1"
+                app:viewType="rectangle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/margin_1"
+                android:id="@+id/timertext"
+                android:textSize="@dimen/small_text_size"
+                android:fontFamily="@font/redhatdisplay_regular"
+                android:textColor="@color/colorPrimary"
+                android:paddingBottom="@dimen/margin_2"
+                android:paddingTop="@dimen/margin_2"
+                android:paddingLeft="@dimen/margin_5"
+                android:paddingRight="@dimen/margin_5"
+                android:text="Left 1: 00 minute"
+                android:background="@drawable/shape_with_blue_stoke"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:textSize="@dimen/small_text_size"
+                    android:padding="@dimen/margin_1"
+                    android:text="Didn't receive the code?"
+                    android:textColor="@color/gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:id="@+id/resend"
+                    android:onClick="@{()->varifyotpViewModel.resendOtp()}"
+                    android:gravity="center"
+                    android:textSize="@dimen/normal_text_size"
+                    android:padding="@dimen/margin_1"
+                    android:text="@string/resend"
+                    android:textColor="@color/gray_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/passwordlay"
+                android:layout_marginTop="@dimen/margin_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/margin_2"
+                    app:hintEnabled="false"
+                    android:background="@drawable/edit_underline_gray"
+                    app:passwordToggleTint="@color/colorAccent"
+                    app:passwordToggleEnabled="true"
+                    android:backgroundTint="@color/fair_pink_color"
+                    android:textColorHint="@color/fair_pink_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/password"
+                        android:longClickable="false"
+                        android:drawablePadding="@dimen/margin_3"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:padding="@dimen/margin_2"
+                        android:background="@color/transparent_color"
+                        android:inputType="textPassword"
+                        android:textSize="@dimen/small_text_size"
+                        android:drawableStart="@drawable/ic_edit_password_blue"
+                        android:backgroundTint="@color/fair_pink_color"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/fair_pink_color"
+                        android:hint="Enter New Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/varifyBT"
+                android:fontFamily="@font/redhatdisplay_regular"
+                android:onClick="@{()->varifyotpViewModel.varifyOtp()}"
+                android:elevation="@dimen/margin_5"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:textColor="@color/white_color"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingLeft="@dimen/margin_10"
+                android:text="@string/verify_otp"
+                android:background="@drawable/button_shape_gradian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

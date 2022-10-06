@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_1"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView android:layout_width="0dp"
+                android:id="@+id/titlename"
+                android:layout_weight="2"
+                android:textSize="@dimen/medium_text_size"
+                android:fontFamily="@font/redhatdisplay_regular"
+                android:textColor="@color/black_color"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView android:layout_width="0dp"
+                android:id="@+id/requirechoose"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:textSize="@dimen/very_small_text_size"
+                android:fontFamily="@font/redhatdisplay_regular"
+                android:textColor="@color/color_red"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+
+        <TextView android:layout_width="wrap_content"
+            android:id="@+id/dicrip"
+            android:textSize="@dimen/very_small_text_size"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:textColor="@color/dark_gray"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:nestedScrollingEnabled="true"
+            android:layout_marginTop="@dimen/margin_04"
+            android:id="@+id/itemsaddrecycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+</layout>

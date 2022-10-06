@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@drawable/bg_border_all_side_4dp"
+        android:layout_width="match_parent"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="@dimen/margin_1"
+            android:text="3:15 PM"
+            android:textStyle="bold"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:id="@+id/time"
+            android:gravity="center"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/black_color"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@color/black_color_light"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:padding="@dimen/margin_1"
+            android:text="Order Placed"
+            android:textStyle="bold"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:id="@+id/message"
+            android:gravity="start"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/black_color"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>

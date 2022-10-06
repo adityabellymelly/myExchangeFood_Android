@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.exchange.user">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+<!--    android:networkSecurityConfig="@xml/network_security_config"-->
+    <application
+        android:largeHeap="true"
+        android:name=".application.ExchangeApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n"
+        tools:replace="android:allowBackup"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <service android:name=".module.base_module.base_service.MyfirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <activity android:name=".module.splesh_module.SplashActivity"
+            android:theme="@style/SpleahTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.paymentModule.PaymentActivity"
+            android:theme="@style/Theme.LauncherActivity">
+            <meta-data
+                android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
+                android:resource="@color/white_color" />
+
+            <meta-data
+                android:name="android.support.customtabs.extra.SECONDARY_TOOLBAR_COLOR"
+                android:resource="@color/white_color" />
+
+            <meta-data
+                android:name="androidx.browser.customtabs.extra.NAVIGATION_BAR_COLOR"
+                android:resource="@color/white_color" />
+            <meta-data android:name="android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY"
+                android:value="${applicationId}.provider"/>
+
+        </activity>
+        <activity android:name=".module.discover_module.DiscoverActivity"
+            android:theme="@style/SpleahTheme"/>
+        <activity android:name=".module.choose_order_module.ChooseOrderActivity"
+            android:theme="@style/SpleahTheme"/>
+        <activity android:name=".module.country_module.CountryActivity"
+            android:theme="@style/SpleahTheme"/>
+        <activity android:name=".module.order_info_module.OrderInfoActivity"
+            android:theme="@style/SpleahTheme"/>
+        <activity android:name=".module.home_module.HomeActivity"
+            android:windowSoftInputMode="adjustNothing"
+            android:configChanges="orientation|keyboard|screenSize"
+            android:theme="@style/MainTheme"/>
+        <activity android:name=".module.restaurent_module.ResturantActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/Restrurent"/>
+        <activity
+            android:name=".module.schedule_order_module.ScheduleOrderActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/Restrurent"/>
+        <activity android:name=".module.signin_module.SignInActivity"
+            android:theme="@style/SignInTheme"/>
+        <activity android:name=".module.forgot_password_module.ForgotPasswordActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/VarifyTheme"/>
+        <activity android:name=".module.varifyotp_module.VarifyOtpActivity"
+            android:theme="@style/VarifyTheme"/>
+        <activity android:name=".module.resetpassword_module.ResetPasswordActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/VarifyTheme"/>
+        <activity android:name=".module.createaccount_module.CreateAccountActivity"
+            android:theme="@style/VarifyTheme"/>
+        <activity android:name="com.exchange.user.module.coupon_module.AppliedCoupenActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/SpleahTheme"/>
+        <activity android:name=".module.order_confirm_module.OrderConfirmActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/OrderConfirmTheme"/>
+        <activity android:name=".module.order_history.OrderHistoryActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/Restrurent"/>
+        <activity android:name=".module.change_address_module.ChangeAddressActivity"
+            android:theme="@style/SignInTheme"/>
+        <activity android:name=".module.edit_profile_module.EditProfileActivity"
+            android:theme="@style/SpleahTheme"/>
+        <activity android:name=".module.change_password_module.ChangePasswordActivity"
+            android:theme="@style/SpleahTheme"/>
+        <activity android:name=".module.paymentModule.WebPayment"
+            android:theme="@style/SpleahTheme"/>
+        <activity android:name=".module.edit_address_module.EditAddressActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/SpleahTheme"/>
+        <activity android:name=".module.feedback_module.FeedbackActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/SpleahTheme"/>
+    </application>
+
+</manifest>

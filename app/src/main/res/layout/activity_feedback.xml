@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="feedbackViewModel"
+            type="com.exchange.user.module.feedback_module.FeedbackViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:padding="@dimen/margin_1"
+                android:layout_width="@dimen/margin_8"
+                android:layout_height="@dimen/margin_8"
+                android:elevation="@dimen/margin_1"
+                android:src="@drawable/ic_back_arrow_black"
+                android:onClick="@{()-> feedbackViewModel.onBack()}"
+                android:layout_margin="@dimen/margin_1"
+                android:id="@+id/goback"
+                android:layout_marginTop="@dimen/margin_2"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="@dimen/large_text_size"
+                android:textColor="@color/black_color"
+                android:gravity="center"
+                android:text="Feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/rootlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/margin_1"
+                    android:layout_marginRight="@dimen/margin_1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/orderno"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/normal_text_size"
+                        android:textColor="@color/color_green"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/orderdate"
+                        android:textSize="@dimen/very_small_text_size"
+                        android:textColor="@color/black_color"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textSize="@dimen/very_small_text_size"
+                            android:textColor="@color/black_color"
+                            android:fontFamily="@font/redhatdisplay_regular"
+                            android:text="Order From :"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:id="@+id/restroname"
+                            android:layout_marginStart="@dimen/margin_03"
+                            android:textSize="@dimen/small_text_size"
+                            android:textColor="@color/color_green"
+                            android:fontFamily="@font/redhatdisplay_regular"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:orientation="vertical">
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:background="@color/gray_light" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_margin="@dimen/margin_1"
+                        android:textStyle="bold"
+                        android:textColor="@color/black_color"
+                        android:gravity="center"
+                        android:textSize="@dimen/normal_text_size"
+                        android:text="Ratings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:orientation="vertical"
+                        android:id="@+id/feedbackrcycle"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:id="@+id/delievryLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_margin="@dimen/margin_1"
+                            android:textStyle="bold"
+                            android:textColor="@color/black_color"
+                            android:gravity="center"
+                            android:textSize="@dimen/normal_text_size"
+                            android:text="Feedback about Delivery Service"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:orientation="vertical"
+                            android:id="@+id/delievryfeedbackrcycle"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_light"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_3"
+                                android:fontFamily="@font/redhatdisplay_regular"
+                                android:text="Ratings"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/medium_text_size"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/redhatdisplay_regular"
+                                android:text="Rate Food Quality"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/small_text_size" />
+                            <RatingBar
+                                android:id="@+id/ratingBar"
+                                style="?android:attr/ratingBarStyleIndicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/margin_2"
+                                android:numStars="5"
+                                android:progressTint="#F5B63F"
+                                android:rating="3"
+                                android:stepSize="1" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dip"
+                                android:layout_marginTop="@dimen/margin_2"
+                                android:background="@color/gray" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_3"
+                                android:fontFamily="@font/redhatdisplay_regular"
+                                android:text="Rate our Delivery"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/small_text_size" />
+
+                            <RatingBar
+                                android:id="@+id/ratingDeliver"
+                                style="?android:attr/ratingBarStyleIndicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/margin_1"
+                                android:numStars="5"
+                                android:progressTint="#F5B63F"
+                                android:rating="3"
+                                android:stepSize="1" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dip"
+                                android:layout_marginTop="@dimen/margin_2"
+                                android:background="@color/gray" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_3"
+                            android:fontFamily="@font/redhatdisplay_regular"
+                            android:text="Additional Comment"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/small_text_size"
+                            android:textStyle="bold" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_5"
+                            app:cardBackgroundColor="@color/white_color"
+                            app:cardCornerRadius="@dimen/margin_2"
+                            app:cardElevation="@dimen/margin_3">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:layout_width="@dimen/navigation_width"
+                                android:id="@+id/comment"
+                                android:gravity="top"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_1"
+                                android:background="@color/transparent_color"
+                                android:inputType="textCapSentences|textMultiLine"
+                                android:minHeight="@dimen/margin_20"
+                                android:padding="@dimen/margin_03"
+                                android:hint="Enter comment here"
+                                android:textColor="@color/black_color"
+                                android:textSize="@dimen/small_text_size" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:onClick="@{()->feedbackViewModel.submitFeedback()}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/margin_16"
+                            android:id="@+id/submitFeedback"
+                            android:background="@drawable/button_shape_gradian"
+                            android:elevation="@dimen/margin_5"
+                            android:paddingLeft="@dimen/margin_10"
+                            android:paddingRight="@dimen/margin_10"
+                            android:text="Submit"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white_color" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

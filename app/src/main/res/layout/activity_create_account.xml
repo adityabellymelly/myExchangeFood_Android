@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="createaccountviewModel" 
+            type="com.exchange.user.module.createaccount_module.CreateAccountViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rootlay"
+        android:background="@color/white_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lay_title"
+            android:padding="@dimen/margin_1"
+            android:orientation="vertical"
+            android:background="@drawable/lay_shape_gradian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:onClick="@{()->createaccountviewModel.back()}"
+                android:padding="@dimen/margin_1"
+                android:layout_margin="@dimen/margin_3"
+                android:src="@drawable/ic_back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_marginStart="@dimen/margin_5"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:paddingBottom="@dimen/margin_2"
+                    android:background="@drawable/underline"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textSize="@dimen/xxlarge_text_size"
+                    android:text="@string/cre"
+                    android:textColor="@color/white_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:paddingBottom="@dimen/margin_2"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textSize="@dimen/xxlarge_text_size"
+                    android:text="@string/ate_account"
+                    android:textColor="@color/white_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/fied"
+            android:layout_below="@+id/lay_title"
+            android:layout_margin="@dimen/margin_5"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernametaxture"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/margin_1"
+                android:backgroundTint="@color/fair_pink_color"
+                android:textColorHint="@color/fair_pink_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.exchange.user.module.utility_module.NoMenuEditText
+                    android:textSelectHandle="@drawable/handle"
+                    android:textIsSelectable="false"
+                    android:longClickable="false"
+                    android:id="@+id/username"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:padding="@dimen/margin_2"
+                    android:background="@drawable/edit_underline_gray"
+                    android:inputType="textCapSentences"
+                    android:textSize="@dimen/small_text_size"
+                    android:drawableStart="@drawable/ic_edit_user_blue"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/fair_pink_color"
+                    android:drawablePadding="@dimen/margin_3"
+                    android:hint="@string/enter_your_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailidtaxture"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/margin_1"
+                android:backgroundTint="@color/fair_pink_color"
+                android:textColorHint="@color/fair_pink_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.exchange.user.module.utility_module.NoMenuEditText
+                    android:textSelectHandle="@drawable/handle"
+                    android:textIsSelectable="false"
+                    android:longClickable="false"
+                    android:background="@drawable/edit_underline_gray"
+                    android:id="@+id/emailid"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:padding="@dimen/margin_2"
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/small_text_size"
+                    android:drawableStart="@drawable/ic_email"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/fair_pink_color"
+                    android:drawablePadding="@dimen/margin_3"
+                    android:hint="@string/enter_email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mobilenotaxture"
+                android:layout_marginTop="@dimen/margin_1"
+                app:hintEnabled="false"
+                android:backgroundTint="@color/fair_pink_color"
+                android:textColorHint="@color/fair_pink_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.exchange.user.module.utility_module.NoMenuEditText
+                    android:textSelectHandle="@drawable/handle"
+                    android:textIsSelectable="false"
+                    android:longClickable="false"
+                    android:background="@drawable/edit_underline_gray"
+                    android:digits="1234567890"
+                    android:id="@+id/mobileno"
+                    android:maxLength="10"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:padding="@dimen/margin_2"
+                    android:inputType="phone|number"
+                    android:textSize="@dimen/small_text_size"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/fair_pink_color"
+                    android:drawablePadding="@dimen/margin_3"
+                    android:hint="Enter Mobile Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordtaxture"
+                android:layout_marginTop="@dimen/margin_1"
+                app:hintEnabled="false"
+                app:passwordToggleTint="@color/colorAccent"
+                app:passwordToggleEnabled="true"
+                android:backgroundTint="@color/fair_pink_color"
+                android:textColorHint="@color/fair_pink_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.exchange.user.module.utility_module.NoMenuEditText
+                    android:textSelectHandle="@drawable/handle"
+                    android:textIsSelectable="false"
+                    android:longClickable="false"
+                    android:background="@drawable/edit_underline_gray"
+                    android:id="@+id/password"
+                    android:drawablePadding="@dimen/margin_3"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:padding="@dimen/margin_2"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/small_text_size"
+                    android:drawableStart="@drawable/ic_edit_password_blue"
+                    android:backgroundTint="@color/fair_pink_color"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/fair_pink_color"
+                    android:hint="@string/star"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="@dimen/margin_7"
+            android:layout_below="@+id/fied"
+            android:onClick="@{()->createaccountviewModel.continoue()}"
+            android:textAllCaps="false"
+            android:textColor="@color/white_color"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_10"
+            android:text="Continue"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:id="@+id/continouesBTN"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:background="@drawable/button_shape_gradian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+</layout>

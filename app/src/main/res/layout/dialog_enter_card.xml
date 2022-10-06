@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:background="@color/white_color"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:orientation="vertical"
+            app:cardBackgroundColor="@color/white_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:background="@drawable/shape_button_simple"
+                android:padding="@dimen/margin_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/back"
+                    android:padding="@dimen/margin_2"
+                    android:src="@drawable/ic_back_arrow_black"
+                    android:textSize="@dimen/normal_text_size"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_marginEnd="@dimen/margin_1"
+                    android:layout_centerVertical="true"
+                    android:text="20"
+                    android:layout_alignParentEnd="true"
+                    android:textColorHint="@color/black_color"
+                    android:id="@+id/creditvalue"
+                    android:textSize="@dimen/normal_text_size"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textColor="@color/black_color"
+                    android:hint="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="@dimen/margin_1"
+                        app:cardElevation="@dimen/margin_1">
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_shape_gradian_forth">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_1"
+                                android:orientation="vertical"
+                                android:paddingBottom="@dimen/margin_1">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/cardTypeIV"
+                                    android:layout_width="@dimen/margin_10"
+                                    android:layout_height="@dimen/margin_8"
+                                    android:layout_marginLeft="@dimen/margin_1"
+                                    android:layout_marginRight="@dimen/margin_1" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_3"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="@dimen/margin_3"
+                                    android:paddingRight="@dimen/margin_3">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/redhatdisplay_regular"
+                                        android:gravity="center"
+                                        android:text="@string/_xxxx"
+                                        android:textColor="@color/white_color"
+                                        android:textSize="@dimen/large_text_size"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/redhatdisplay_regular"
+                                        android:gravity="center"
+                                        android:text="@string/_xxxx"
+                                        android:textColor="@color/white_color"
+                                        android:textSize="@dimen/large_text_size" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/redhatdisplay_regular"
+                                        android:gravity="center"
+                                        android:text="@string/_xxxx"
+                                        android:textColor="@color/white_color"
+                                        android:textSize="@dimen/large_text_size" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/cardLast4DigitTV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/redhatdisplay_regular"
+                                        android:gravity="center"
+                                        android:maxLength="4"
+                                        android:textColor="@color/white_color"
+                                        android:textSize="@dimen/large_text_size" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_4"
+                                    android:baselineAligned="false"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="@dimen/margin_1"
+                                    android:paddingRight="@dimen/margin_1">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_03"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/redhatdisplay_regular"
+                                            android:text="@string/cardholder"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/white_color"
+                                            android:textSize="@dimen/medium_text_size" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/cardHolderNameTV"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:fontFamily="@font/redhatdisplay_regular"
+                                            android:hint="@string/_xxxx"
+                                            android:maxLines="1"
+                                            android:textColor="@color/white_color"
+                                            android:textColorHint="@color/colorPrimary"
+                                            android:textSize="@dimen/medium_text_size" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_marginLeft="@dimen/margin_1"
+                                        android:layout_marginStart="@dimen/margin_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_1"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/redhatdisplay_regular"
+                                            android:gravity="end"
+                                            android:text="@string/expires"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/white_color"
+                                            android:textSize="@dimen/medium_text_size" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/expiryDateTV"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/redhatdisplay_regular"
+                                            android:gravity="end"
+                                            android:hint="@string/xx_xxxx"
+                                            android:textColor="@color/white_color"
+                                            android:textColorHint="@color/colorPrimary"
+                                            android:textSize="@dimen/medium_text_size" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        app:hintEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:padding="@dimen/margin_2"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/normal_text_size"
+                            android:background="@color/transparent_color"
+                            android:hint="@string/your_card_number"
+                            android:id="@+id/cardNumberET"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_1"
+                            android:fontFamily="@font/redhatdisplay_regular"
+                            android:inputType="phone"
+                            android:maxLength="19"
+                            android:drawablePadding="@dimen/margin_1"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1.7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_1"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:padding="@dimen/margin_2"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/normal_text_size"
+                                        android:hint="MM"
+                                        android:id="@+id/cardExpiryMonthET"
+                                        android:layout_width="@dimen/margin_17"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/transparent_color"
+                                        android:focusable="false"
+                                        android:fontFamily="@font/redhatdisplay_regular"
+                                        android:gravity="center"
+                                        android:inputType="number"/>
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <View
+                                    android:layout_width="@dimen/margin_2"
+                                    android:layout_height="@dimen/margin_6" />
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:padding="@dimen/margin_2"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/normal_text_size"
+                                        android:hint="YYYY"
+                                        android:id="@+id/cardExpiryYearET"
+                                        android:layout_width="@dimen/margin_19"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/transparent_color"
+                                        android:focusable="false"
+                                        android:fontFamily="@font/redhatdisplay_regular"
+                                        android:gravity="center"
+                                        android:inputType="number" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                app:hintEnabled="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:padding="@dimen/margin_2"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/normal_text_size"
+                                    android:hint="@string/cvv"
+                                    android:id="@+id/cardCVVET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_1"
+                                    android:background="@color/transparent_color"
+                                    android:fontFamily="@font/redhatdisplay_regular"
+                                    android:inputType="number"
+                                    android:maxLength="3"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/extrafeeld"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_margin="@dimen/margin_02"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:padding="@dimen/margin_2"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/normal_text_size"
+                                        android:background="@color/transparent_color"
+                                        android:hint="@string/first_name"
+                                        android:id="@+id/cardHolderNameET"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_1"
+                                        android:fontFamily="@font/redhatdisplay_regular"
+                                        android:inputType="textCapSentences"/>
+
+
+
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_margin="@dimen/margin_02"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+                                <com.google.android.material.textfield.TextInputLayout
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:padding="@dimen/margin_2"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/normal_text_size"
+                                        android:hint="Last Name"
+                                        android:id="@+id/cardHoldeLastET"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/margin_1"
+                                        android:background="@color/transparent_color"
+                                        android:fontFamily="@font/redhatdisplay_regular"
+                                        android:inputType="textCapSentences"/>
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hintEnabled="false">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/cardaddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_1"
+                                android:background="@color/transparent_color"
+                                android:fontFamily="@font/redhatdisplay_regular"
+                                android:hint="@string/address"
+                                android:inputType="textCapSentences"
+                                android:maxLines="3"
+                                android:padding="@dimen/margin_2"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/normal_text_size" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_marginRight="@dimen/margin_1"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_marginTop="@dimen/margin_1"
+                                    app:hintEnabled="false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+
+                                        android:id="@+id/cardcity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/transparent_color"
+                                        android:fontFamily="@font/redhatdisplay_regular"
+                                        android:hint="@string/city"
+                                        android:inputType="textCapSentences"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/margin_2"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="@dimen/normal_text_size" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                app:hintEnabled="false"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/margin_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/cardstate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/transparent_color"
+                                    android:fontFamily="@font/redhatdisplay_regular"
+                                    android:hint="@string/state"
+                                    android:inputType="textCapSentences"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/margin_2"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        app:hintEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:padding="@dimen/margin_2"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/normal_text_size"
+                            android:hint="ZIP"
+                            android:inputType="textCapSentences"
+                            android:maxLines="3"
+                            android:id="@+id/zipcode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_1"
+                            android:background="@color/transparent_color"
+                            android:fontFamily="@font/redhatdisplay_regular"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/addPaymentMethodBTN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_6"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:paddingLeft="@dimen/margin_3"
+                    android:paddingTop="@dimen/margin_3"
+                    android:paddingRight="@dimen/margin_3"
+                    android:paddingBottom="@dimen/margin_3"
+                    android:text="CheckOut"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/normal_text_size"
+                    app:cornerRadius="@dimen/margin_1"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</layout>

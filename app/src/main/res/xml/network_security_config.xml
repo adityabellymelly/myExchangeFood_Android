@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">https://aafesprem.imenu360.com/</domain>
+        <domain includeSubdomains="true">https://aafesapi.imenu360.com/iMenu360Service.svc/</domain>
+        <domain includeSubdomains="true">http://staging.m4.imenu360.com/aafesproxy/</domain>
+    </domain-config>
+</network-security-config>

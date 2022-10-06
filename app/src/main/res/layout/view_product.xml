@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_color">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/closse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_button_shape_simple"
+            android:elevation="@dimen/margin_1"
+            android:padding="@dimen/margin_1"
+            android:src="@drawable/ic_close_white_24dp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedscol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_3"
+                android:background="@drawable/shape_with_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:padding="@dimen/margin_01">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/itemsName"
+                                android:fontFamily="@font/redhatdisplay_regular"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_02"
+                                android:maxWidth="210dp"
+                                android:textSize="@dimen/medium_text_size" />
+
+                            <LinearLayout
+                                android:layout_width="84dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/vegIcon1"
+                                    android:layout_width="@dimen/margin_3"
+                                    android:layout_height="@dimen/margin_3"
+                                    android:layout_gravity="top"
+                                    android:layout_margin="@dimen/margin_01" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/vegIcon2"
+                                    android:layout_width="@dimen/margin_3"
+                                    android:layout_height="@dimen/margin_3"
+                                    android:layout_gravity="top"
+                                    android:layout_margin="@dimen/margin_01" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/vegIcon3"
+                                    android:layout_width="@dimen/margin_3"
+                                    android:layout_height="@dimen/margin_3"
+                                    android:layout_gravity="top"
+                                    android:layout_margin="@dimen/margin_01" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/vegIcon4"
+                                    android:layout_width="@dimen/margin_3"
+                                    android:layout_height="@dimen/margin_3"
+                                    android:layout_gravity="top"
+                                    android:layout_margin="@dimen/margin_01" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/countItems"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_gray_stoke"
+                                android:gravity="center_vertical"
+                                tools:ignore="UselessParent">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/Quality_decreasee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_04"
+                                    android:background="@drawable/circle_mark"
+                                    android:padding="1dp"
+                                    android:src="@drawable/ic_remove" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/quantity_count"
+                                    android:layout_width="41dp"
+                                    android:fontFamily="@font/redhatdisplay_regular"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:gravity="center"
+                                    android:text="@string/_1" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/Quantity_incressed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/margin_04"
+                                    android:background="@drawable/circle_mark"
+                                    android:src="@drawable/ic_add" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/discription"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:padding="@dimen/margin_1"
+                        android:textSize="@dimen/small_text_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sizelay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_color">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_light"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_1"
+                            android:fontFamily="@font/redhatdisplay_regular"
+                            android:text="@string/choose_a_size"
+                            android:textColor="@color/black_color"
+                            android:textSize="@dimen/medium_text_size" />
+
+                        <RadioGroup
+                            android:id="@+id/radiogrup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:id="@+id/p1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_7"
+                                android:fontFamily="@font/redhatdisplay_regular"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/small_text_size" />
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:id="@+id/p2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_7"
+                                android:fontFamily="@font/redhatdisplay_regular"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/small_text_size" />
+
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:id="@+id/p3"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_7"
+                                android:fontFamily="@font/redhatdisplay_regular"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/small_text_size" />
+
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:id="@+id/p4"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_7"
+                                android:fontFamily="@font/redhatdisplay_regular"
+
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/small_text_size" />
+
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:id="@+id/p5"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_7"
+                                android:fontFamily="@font/redhatdisplay_regular"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/small_text_size" />
+
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_1">
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:orientation="vertical">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layoutAnimation="@anim/layout_animation_fall_down"
+                            android:nestedScrollingEnabled="true"
+                            android:id="@+id/itemsaddrecycle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/margin_1"
+                    android:background="@color/gray_light"
+                    android:visibility="gone" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/sepialInstruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_3"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_marginRight="@dimen/margin_3"
+                    android:layout_marginBottom="@dimen/margin_3"
+                    android:background="@drawable/button_shape_white_gray_stoke"
+                    android:gravity="left"
+                    android:hint="@string/special_instructions"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minHeight="50dp"
+                    android:padding="@dimen/margin_1"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/very_small_text_size" />
+
+
+                <RelativeLayout
+                    android:id="@+id/addtobag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_3"
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:layout_marginRight="@dimen/margin_3"
+                    android:layout_marginBottom="@dimen/margin_3"
+                    android:background="@color/dark_gray"
+                    android:gravity="center_vertical">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/temstotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:padding="@dimen/margin_2"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white_color"
+                        android:textSize="@dimen/small_text_size"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:padding="@dimen/margin_2"
+                        android:text="@string/add_item"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white_color"
+                        android:textSize="@dimen/small_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

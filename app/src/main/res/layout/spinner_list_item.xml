@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinnerItemTextViewTV"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_8"
+    android:background="@drawable/bg_light_blue_all_side_4dp"
+    android:fontFamily="@font/redhatdisplay_regular"
+    android:gravity="center_vertical"
+    android:maxLines="1"
+    android:paddingStart="@dimen/margin_2"
+    android:paddingEnd="@dimen/margin_2"
+    android:textColor="@android:color/black"
+    android:textSize="@dimen/small_text_size"/>

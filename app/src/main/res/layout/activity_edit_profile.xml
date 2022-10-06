@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="editProfileViewModel"
+            type="com.exchange.user.module.edit_profile_module.EditProfileViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/titel"
+            app:cardBackgroundColor="@color/white_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:background="@drawable/shadow"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:onClick="@{()->editProfileViewModel.onBack()}"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:id="@+id/goback"
+                    android:layout_margin="@dimen/margin_2"
+                    android:src="@drawable/ic_back_arrow_black"
+                    android:layout_width="@dimen/margin_6"
+                    android:layout_height="@dimen/margin_7"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:id="@+id/titeltext"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/medium_text_size">
+                </androidx.appcompat.widget.AppCompatTextView>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:padding="@dimen/margin_1"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:orientation="vertical"
+                    android:background="@color/white_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:background="@color/white_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/firstnameTexture"
+                            android:layout_marginEnd="@dimen/margin_1"
+                            android:background="@color/white_color"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <com.exchange.user.module.utility_module.NoMenuEditText
+                                android:textSelectHandle="@drawable/handle"
+                                android:longClickable="false"
+                                android:textIsSelectable="false"
+                                android:id="@+id/firstname"
+                                android:singleLine="true"
+                                android:background="@color/white_color"
+                                android:hint="First Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_marginStart="@dimen/margin_1"
+                            android:background="@color/white_color"
+                            android:layout_width="0dp"
+                            android:id="@+id/lastnameTexture"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <com.exchange.user.module.utility_module.NoMenuEditText
+                                android:textSelectHandle="@drawable/handle"
+                                android:longClickable="false"
+                                android:textIsSelectable="false"
+                                android:id="@+id/lastname"
+                                android:singleLine="true"
+                                android:background="@color/white_color"
+                                android:hint="Last Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:background="@color/white_color"
+                    android:id="@+id/usernametaxture"
+                    app:errorTextColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.exchange.user.module.utility_module.NoMenuEditText
+                        android:textSelectHandle="@drawable/handle"
+                        android:longClickable="false"
+                        android:textIsSelectable="false"
+                        android:id="@+id/username"
+                        android:singleLine="true"
+                        android:background="@color/white_color"
+                        android:hint="Username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:background="@color/white_color"
+                    android:id="@+id/mobileNotaxture"
+                    app:errorTextColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.exchange.user.module.utility_module.NoMenuEditText
+                        android:textSelectHandle="@drawable/handle"
+                        android:longClickable="false"
+                        android:textIsSelectable="false"
+                        android:id="@+id/mobileno"
+                        android:singleLine="true"
+                        android:background="@color/white_color"
+                        android:hint="Mobile No."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_4"
+                    android:background="@drawable/button_shape_gradian"
+                    android:paddingLeft="@dimen/margin_4"
+                    android:paddingRight="@dimen/margin_4">
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/saveaddrsssbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent_color"
+                        android:onClick="@{()->editProfileViewModel.save()}"
+                        android:text="Save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white_color" />
+
+                    <LinearLayout
+                        android:id="@+id/animatedview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/animation_view"
+                            android:layout_width="@dimen/xlarge_margin"
+                            android:layout_height="@dimen/xlarge_margin"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="loading.json"
+                            app:lottie_loop="true" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+        android:padding="@dimen/margin_03"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:gravity="center"
+            android:text="Q- "
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/black_color"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/question"
+            android:text="How would you rate the quality of your food?"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/black_color"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/answerRecycle"
+            app:spanCount="4"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>

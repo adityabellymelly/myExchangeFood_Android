@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/profile_outside_width"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    map:cameraZoom="10"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/marker"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardcont"
+                app:cardCornerRadius="@dimen/margin_04"
+                android:layout_marginRight="@dimen/margin_2"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_margin="@dimen/margin_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/backbtn"
+                        android:src="@drawable/ic_back_arrow_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_toStartOf="@+id/navoifa"
+                        android:layout_toEndOf="@+id/backbtn"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:imeOptions="actionDone"
+                        android:ellipsize="end"
+                        android:id="@+id/serchplace"
+                        android:hint="@string/search_place"
+                        android:layout_margin="@dimen/margin_02"
+                        android:padding="@dimen/margin_1"
+                        android:background="@color/transparent_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </androidx.appcompat.widget.AppCompatEditText>
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/navoifa"
+                        android:src="@drawable/ic_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAddresses"
+                android:layout_marginRight="@dimen/margin_7"
+                android:layout_marginLeft="@dimen/margin_7"
+                android:layout_below="@+id/cardcont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/bottemlay"
+            layout="@layout/bottom_sheet_save_delivery_location" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

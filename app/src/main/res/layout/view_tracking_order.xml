@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_color">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/closse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_button_shape_simple"
+            android:elevation="@dimen/margin_1"
+            android:padding="@dimen/margin_1"
+            android:src="@drawable/ic_close_white_24dp" />
+
+         <androidx.core.widget.NestedScrollView
+             android:layout_marginTop="@dimen/margin_3"
+             android:background="@drawable/shape_with_white"
+
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <androidx.appcompat.widget.LinearLayoutCompat
+                 android:padding="@dimen/margin_1"
+                 android:orientation="vertical"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <androidx.appcompat.widget.AppCompatTextView
+                     android:layout_marginTop="@dimen/margin_2"
+                     android:id="@+id/orderno"
+                     android:textColor="@color/colorAccent"
+                     android:padding="@dimen/margin_1"
+                     android:fontFamily="@font/redhatdisplay_regular"
+                     android:textStyle="bold"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"/>
+
+                 <LinearLayout
+                     android:orientation="vertical"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+                     <TextView
+                         android:layout_marginLeft="@dimen/margin_1"
+                         android:layout_marginRight="@dimen/margin_1"
+                         android:id="@+id/delievryStatus"
+                         android:textSize="@dimen/small_text_size"
+                         android:gravity="center_vertical"
+                         android:textColor="@color/black_color"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <RelativeLayout
+                         android:gravity="center_horizontal"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content">
+
+
+                         <RelativeLayout
+                             android:layout_centerHorizontal="true"
+                             android:layout_margin="@dimen/margin_2"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+                             <LinearLayout
+                                 android:id="@+id/placesView"
+                                 android:layout_width="@dimen/margin_7"
+                                 android:layout_height="@dimen/margin_7"
+                                 android:background="@drawable/circle_mark_gray"
+                                 android:gravity="center">
+
+                                 <ImageView
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:src="@drawable/ic_ic_check_white" />
+
+                             </LinearLayout>
+
+                             <androidx.appcompat.widget.AppCompatTextView
+                                 android:layout_below="@+id/placesView"
+                                 android:layout_marginTop="@dimen/margin_03"
+                                 android:textColor="@color/black_color"
+                                 android:fontFamily="@font/redhatdisplay_regular"
+                                 android:text="Order Placed"
+                                 android:textSize="@dimen/very_small_text_size"
+                                 android:layout_width="@dimen/margin_10"
+                                 android:layout_height="wrap_content"/>
+
+                             <ProgressBar
+                                 android:id="@+id/placeOrderProgress"
+                                 android:layout_marginTop="@dimen/margin_2"
+                                 android:progressBackgroundTint="@color/gray"
+                                 android:progressTint="@color/colorPrimary"
+                                 android:max="10"
+                                 android:layout_toEndOf="@+id/placesView"
+                                 style="?android:attr/progressBarStyleHorizontal"
+                                 android:layout_width="@dimen/margin_12"
+                                 android:layout_height="@dimen/margin_2"/>
+
+                             <LinearLayout
+                                 android:layout_toEndOf="@+id/placeOrderProgress"
+                                 android:gravity="center"
+                                 android:id="@+id/prosseingView"
+                                 android:layout_width="@dimen/margin_7"
+                                 android:layout_height="@dimen/margin_7"
+                                 android:background="@drawable/circle_mark_gray">
+
+                                 <ImageView
+                                     android:src="@drawable/ic_ic_check_white"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"/>
+
+                             </LinearLayout>
+
+                             <androidx.appcompat.widget.AppCompatTextView
+                                 android:id="@+id/prosessingText"
+                                 android:layout_toEndOf="@+id/placeOrderProgress"
+                                 android:layout_below="@+id/prosseingView"
+                                 android:layout_marginTop="@dimen/margin_03"
+                                 android:textColor="@color/black_color"
+                                 android:fontFamily="@font/redhatdisplay_regular"
+                                 android:text="Being\nPrepared"
+                                 android:textSize="@dimen/very_small_text_size"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"/>
+
+                             <ProgressBar
+                                 android:progressBackgroundTint="@color/gray"
+                                 android:progressTint="@color/colorPrimary"
+                                 android:id="@+id/prosseingOrderProgress"
+                                 style="?android:attr/progressBarStyleHorizontal"
+                                 android:layout_width="@dimen/margin_12"
+                                 android:layout_height="@dimen/margin_2"
+                                 android:layout_marginTop="@dimen/margin_2"
+                                 android:layout_toEndOf="@+id/prosseingView"
+                                 android:max="10" />
+
+
+                             <LinearLayout
+                                 android:layout_toEndOf="@+id/prosseingOrderProgress"
+                                 android:gravity="center"
+                                 android:id="@+id/driverView"
+                                 android:layout_width="@dimen/margin_7"
+                                 android:layout_height="@dimen/margin_7"
+                                 android:background="@drawable/circle_mark_gray">
+
+                                 <ImageView
+                                     android:src="@drawable/ic_ic_check_white"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"/>
+
+                             </LinearLayout>
+
+                             <androidx.appcompat.widget.AppCompatTextView
+                                 android:id="@+id/driverViewText"
+                                 android:layout_toEndOf="@+id/prosseingOrderProgress"
+                                 android:layout_below="@+id/driverView"
+                                 android:layout_marginTop="@dimen/margin_03"
+                                 android:textColor="@color/black_color"
+                                 android:fontFamily="@font/redhatdisplay_regular"
+                                 android:text="Driver\nEnroute"
+                                 android:textSize="@dimen/very_small_text_size"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"/>
+
+                             <ProgressBar
+                                 android:progressBackgroundTint="@color/gray"
+                                 android:progressTint="@color/colorPrimary"
+                                 android:id="@+id/driverViewProgress"
+                                 android:layout_marginTop="@dimen/margin_2"
+                                 android:max="10"
+                                 android:layout_toEndOf="@+id/driverView"
+                                 style="?android:attr/progressBarStyleHorizontal"
+                                 android:layout_width="@dimen/margin_12"
+                                 android:layout_height="@dimen/margin_2"/>
+
+                             <LinearLayout
+                                 android:layout_toEndOf="@+id/driverViewProgress"
+                                 android:gravity="center"
+                                 android:id="@+id/deliveryView"
+                                 android:layout_width="@dimen/margin_7"
+                                 android:layout_height="@dimen/margin_7"
+                                 android:background="@drawable/circle_mark_gray">
+
+                                 <ImageView
+                                     android:src="@drawable/ic_ic_check_white"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"/>
+
+                             </LinearLayout>
+
+                             <androidx.appcompat.widget.AppCompatTextView
+                                 android:id="@+id/delievryText"
+                                 android:layout_toEndOf="@+id/driverViewProgress"
+                                 android:layout_below="@+id/deliveryView"
+                                 android:layout_marginTop="@dimen/margin_03"
+                                 android:textColor="@color/black_color"
+                                 android:fontFamily="@font/redhatdisplay_regular"
+                                 android:text="Delivery"
+                                 android:textSize="@dimen/very_small_text_size"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"/>
+
+                         </RelativeLayout>
+                     </RelativeLayout>
+
+                     <androidx.appcompat.widget.AppCompatButton
+                         android:visibility="gone"
+                         android:layout_margin="@dimen/margin_1"
+                         android:layout_gravity="center"
+                         android:id="@+id/preview"
+                         android:padding="@dimen/margin_2"
+                         android:drawablePadding="@dimen/margin_1"
+                         android:text="Food Delivered (tap to view)"
+                         android:textColor="@color/white_color"
+                         android:background="@drawable/button_rec_shape_gradian"
+                         android:textAllCaps="true"
+                         android:layout_width="wrap_content"
+                         android:layout_height="@dimen/margin_8"/>
+                     <LinearLayout
+                         android:visibility="gone"
+                         android:layout_marginLeft="@dimen/margin_1"
+                         android:layout_marginRight="@dimen/margin_1"
+                         android:orientation="vertical"
+                         android:id="@+id/addressLay"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content">
+
+                         <TextView
+                             android:id="@+id/estimatetime"
+                             android:textSize="@dimen/small_text_size"
+                             android:gravity="center_vertical"
+                             android:padding="@dimen/margin_1"
+                             android:textColor="@color/black_color"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"/>
+
+                         <TextView
+                             android:fontFamily="@font/redhatdisplay_regular"
+                             android:id="@+id/delievryTitle"
+                             android:textStyle="bold"
+                             android:textAllCaps="false"
+                             android:layout_marginTop="@dimen/margin_1"
+                             android:textSize="@dimen/normal_text_size"
+                             android:gravity="center_vertical"
+                             android:textColor="@color/black_color"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"/>
+                         <TextView
+                             android:fontFamily="@font/redhatdisplay_regular"
+                             android:textStyle="bold"
+                             android:id="@+id/delievryAddress"
+                             android:textSize="@dimen/small_text_size"
+                             android:gravity="center_vertical"
+                             android:textColor="@color/black_color"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"/>
+                     </LinearLayout>
+                     <LinearLayout
+                         android:layout_marginLeft="@dimen/margin_1"
+                         android:layout_marginRight="@dimen/margin_1"
+                         android:id="@+id/messageList"
+                         android:orientation="vertical"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content">
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/margin_2"
+                             android:fontFamily="@font/redhatdisplay_regular"
+                             android:text="History :"
+                             android:textColor="@color/black_color"
+                             android:textSize="@dimen/normal_text_size"
+                             android:textStyle="bold" />
+
+                         <TextView
+                             android:id="@+id/todayDate"
+                             android:textStyle="bold"
+                             android:fontFamily="@font/redhatdisplay_regular"
+                             android:textColor="@color/black_color"
+                             android:textSize="@dimen/normal_text_size"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"/>
+
+
+
+                         <androidx.recyclerview.widget.RecyclerView
+                             android:layout_marginTop="@dimen/margin_03"
+                             android:orientation="vertical"
+                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                             android:id="@+id/quickMessage"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"/>
+
+
+                     </LinearLayout>
+
+
+                     <Button
+                         android:textAllCaps="false"
+                         android:visibility="gone"
+                         android:id="@+id/orderdetails"
+                         android:layout_margin="@dimen/margin_2"
+                         android:fontFamily="@font/redhatdisplay_regular"
+                         android:textColor="@color/white_color"
+                         android:text="Order Details"
+                         android:background="@drawable/button_rec_shape_gradian"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"/>
+
+
+                 </LinearLayout>
+
+
+
+             </androidx.appcompat.widget.LinearLayoutCompat>
+
+         </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+</layout>

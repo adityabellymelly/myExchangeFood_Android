@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="aboutUsViewModel"
+            type="com.exchange.user.module.about_us_module.AboutUsViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/view"
+            android:orientation="vertical"
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/titel"
+                    app:cardBackgroundColor="@color/white_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:padding="@dimen/margin_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/redhatdisplay_regular"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="About Us"
+                        android:textColor="@color/black_color"
+                        android:textSize="@dimen/medium_text_size">
+                    </androidx.appcompat.widget.AppCompatTextView>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_1"
+                    android:background="@color/white_color"
+                    android:layout_below="@+id/titel"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+<!--                            <TextView-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:layout_marginTop="@dimen/margin_2"-->
+<!--                                android:textAllCaps="true"-->
+<!--                                android:fontFamily="@font/redhatdisplay_regular"-->
+<!--                                android:textSize="@dimen/normal_text_size"-->
+<!--                                android:textColor="@color/black_color"-->
+<!--                                android:id="@+id/aboutTitel"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"/>-->
+
+                            <WebView
+                                android:id="@+id/moreabout"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+                            </WebView>
+
+<!--                            <TextView-->
+<!--                                android:padding="@dimen/margin_1"-->
+<!--                                android:layout_marginTop="@dimen/margin_1"-->
+<!--                                android:fontFamily="@font/redhatdisplay_regular"-->
+<!--                                android:textSize="@dimen/normal_text_size"-->
+<!--                                android:textColor="@color/black_color"-->
+<!--                                android:id="@+id/abouttext"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"/>-->
+
+                        </LinearLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/profile_outside_width"
+            android:gravity="center"
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:padding="@dimen/margin_5"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:src="@drawable/logo"
+                android:layout_height="@dimen/navigation_width"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/margin_7"
+                android:layout_marginRight="@dimen/margin_7"
+                android:background="@drawable/button_rec_shape_gradian"
+                android:onClick="@{()->aboutUsViewModel.goToSignIn()}"
+                android:textColor="@color/white_color"
+                android:fontFamily="@font/redhatdisplay_regular"
+                android:textSize="@dimen/small_text_size"
+                android:text="@string/signin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

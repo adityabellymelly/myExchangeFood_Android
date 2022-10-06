@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="@dimen/margin_1"
+        android:background="@drawable/shape_stock"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/servicename"
+            android:padding="@dimen/margin_1"
+            android:textStyle="bold"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/small_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="@dimen/margin_1"
+        android:background="@drawable/shape_stock"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:text="Yes"
+            android:padding="@dimen/margin_1"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/small_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="@dimen/margin_1"
+        android:background="@drawable/shape_stock"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:text="1.00"
+            android:id="@+id/minorder"
+            android:padding="@dimen/margin_1"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/small_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="@dimen/margin_1"
+        android:background="@drawable/shape_stock"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:text="1.00"
+            android:id="@+id/minCharge"
+            android:padding="@dimen/margin_1"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/small_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="@dimen/margin_1"
+        android:background="@drawable/shape_stock"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/readyin"
+            android:padding="@dimen/margin_01"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/small_text_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+</layout>

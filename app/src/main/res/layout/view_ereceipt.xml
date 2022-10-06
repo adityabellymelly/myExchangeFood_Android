@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_color">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/closse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_button_shape_simple"
+        android:elevation="@dimen/margin_1"
+        android:padding="@dimen/margin_1"
+        android:src="@drawable/ic_close_white_24dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="@dimen/margin_3"
+        android:background="@drawable/shape_with_white"
+        android:padding="@dimen/margin_2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/orderno"
+            android:textColor="@color/colorAccent"
+            android:padding="@dimen/margin_2"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textColor="@color/black_color"
+                android:padding="@dimen/margin_2"
+                android:fontFamily="@font/redhatdisplay_regular"
+                android:textStyle="bold"
+                android:text="@string/ereceipt_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+             <androidx.appcompat.widget.AppCompatEditText
+                 android:fontFamily="@font/redhatdisplay_regular"
+                 android:id="@+id/emailfield"
+                 android:layout_marginLeft="@dimen/margin_3"
+                 android:layout_marginRight="@dimen/margin_3"
+                 android:padding="@dimen/margin_2"
+                 android:background="@drawable/bg_light_blue_all_side_4dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submitbtn"
+                android:textAllCaps="false"
+                android:text="@string/submit"
+                android:textColor="@color/white_color"
+                android:background="@drawable/button_rec_shape_gradian_green"
+                android:layout_marginBottom="@dimen/margin_6"
+                android:layout_marginTop="@dimen/margin_3"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:elevation="@dimen/margin_1"
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="170dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+        <LinearLayout
+            android:background="@color/white_color"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@color/white_color"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_marginTop="@dimen/margin_2"
+                            android:layout_marginStart="@dimen/margin_2"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/normal_text_size"
+                            android:text="Your Location"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:padding="@dimen/margin_1"
+                            android:id="@+id/fulladdress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:drawableStart="@drawable/ic_ic_check"
+                            android:drawablePadding="@dimen/margin_1"
+                            android:gravity="start"
+                            android:hint="@string/your_location" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:background="@color/gray_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <LinearLayout
+                        android:padding="@dimen/margin_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:background="@color/transparent_color"
+                            android:layout_width="0dip"
+                            android:id="@+id/username"
+                            android:textSize="@dimen/normal_text_size"
+                            android:fontFamily="@font/redhatdisplay_regular"
+                            android:layout_weight="1"
+                            android:gravity="left"
+
+                            android:textColor="@color/gray"
+                            android:layout_height="match_parent"/>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:background="@color/transparent_color"
+                            android:layout_width="0dip"
+                            android:textSize="@dimen/normal_text_size"
+                            android:fontFamily="@font/redhatdisplay_regular"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:id="@+id/mobileno"
+                            android:layout_height="match_parent"/>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_marginRight="@dimen/margin_1"
+                        android:layout_marginLeft="@dimen/margin_1"
+                        android:layout_marginBottom="@dimen/margin_3"
+                        android:background="@drawable/shape_with_gray_stock"
+                        android:padding="@dimen/margin_1"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:id="@+id/doorno"
+                            android:textSize="@dimen/small_text_size"
+                            android:padding="@dimen/margin_04"
+                            android:background="@color/transparent_color"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:hint="Door / Flat No."
+                            android:textColor="@color/black_color"
+                            android:layout_height="match_parent"/>
+
+                        <View
+                            android:background="@color/gray_light"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"/>
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:maxLines="1"
+                            android:imeOptions="actionDone"
+                            android:id="@+id/spicialinstruction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/transparent_color"
+                            android:gravity="start"
+                            android:hint="Special instructions"
+                            android:padding="@dimen/margin_1"
+                            android:textColor="@color/black_color"
+                            android:textSize="@dimen/small_text_size"/>
+
+                        <View
+                            android:background="@color/gray_light"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"/>
+
+
+
+                        <RadioGroup
+                            android:id="@+id/radiogrop"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:checked="true"
+                                android:id="@+id/home"
+                                android:textAllCaps="true"
+                                android:textSize="@dimen/small_text_size"
+                                android:textColor="@color/gray"
+                                android:text="@string/home"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                            </androidx.appcompat.widget.AppCompatRadioButton>
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/office"
+                                android:textAllCaps="true"
+                                android:textSize="@dimen/small_text_size"
+                                android:textColor="@color/gray"
+                                android:text="@string/office"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                            </androidx.appcompat.widget.AppCompatRadioButton>
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/other"
+                                android:textAllCaps="true"
+                                android:textSize="@dimen/small_text_size"
+                                android:textColor="@color/gray"
+                                android:text="@string/other"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                            </androidx.appcompat.widget.AppCompatRadioButton>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_margin="@dimen/margin_4"
+                        android:paddingRight="@dimen/margin_4"
+                        android:paddingLeft="@dimen/margin_4"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_shape_gradian"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/saveaddrsssbtn"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Save &amp; Proceed"
+                        android:textColor="@color/white_color"
+                        android:layout_height="match_parent"/>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:background="@drawable/shape_with_white"
+        android:padding="@dimen/margin_2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/editprofile"
+            android:padding="@dimen/margin_2"
+            android:gravity="center"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:textStyle="bold"
+            android:text="Edit Profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_01"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/changepassword"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:padding="@dimen/margin_2"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Change Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_01"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/baseLocation"
+            android:padding="@dimen/margin_2"
+            android:gravity="center"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:textStyle="bold"
+            android:text="Change Base Locations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+<!--        <View-->
+<!--            android:background="@color/gray_light"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/margin_01"/>-->
+
+<!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--            android:id="@+id/deleteaccount"-->
+<!--            android:padding="@dimen/margin_2"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@color/color_red"-->
+<!--                android:text="Delete Account"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@color/color_red"-->
+<!--                android:text="(You'll permanently loose your account and orders.)"-->
+<!--                android:textSize="@dimen/margin_1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+<!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_01"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textStyle="bold"
+            android:id="@+id/cancel"
+            android:layout_marginTop="@dimen/margin_2"
+            android:padding="@dimen/margin_2"
+            android:gravity="center"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:text="Cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

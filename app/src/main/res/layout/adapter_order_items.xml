@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_01"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/margin_03"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="left"
+                    android:layout_weight="2.5"
+                    android:layout_margin="@dimen/margin_01"
+                    android:text="Pepsi Test"
+                    android:layout_width="0dp"
+                    android:ellipsize="end"
+                    android:textColor="@color/black_color"
+                    android:maxLines="3"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/itemsName" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/margin_01"
+                    android:text="6 Pack"
+                    android:layout_width="0dp"
+                    android:ellipsize="end"
+                    android:textColor="@color/black_color"
+                    android:maxLines="3"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textSize="@dimen/normal_text_size"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/positionName" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_margin="@dimen/margin_01"
+                    android:gravity="center"
+                    android:text="$20.00"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:id="@+id/actualprice"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textSize="@dimen/normal_text_size"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:id="@+id/qty"
+                    android:textColor="@color/black_color"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textSize="@dimen/normal_text_size"
+                    android:layout_margin="@dimen/margin_01"
+                    android:layout_height="wrap_content"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_margin="@dimen/margin_01"
+                    android:gravity="center"
+                    android:text="$20.00"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:id="@+id/aditionalPrice"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/redhatdisplay_regular"
+                    android:textSize="@dimen/normal_text_size"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:visibility="gone"
+                android:id="@+id/addon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Addons - "
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/very_small_text_size"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                app:spanCount="2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                android:layout_marginRight="@dimen/margin_1"
+                android:layout_marginLeft="@dimen/margin_1"
+                android:id="@+id/addonitems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_light"/>
+    </LinearLayout>
+</layout>
